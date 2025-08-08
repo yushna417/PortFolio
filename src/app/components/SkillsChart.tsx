@@ -4,13 +4,11 @@ import { motion } from "framer-motion";
 import { Skill } from "../types/types";
 import {
   SiHtml5,
-  SiCss3,
   SiJavascript,
   SiTypescript,
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
-  SiAntdesign,
   SiDjango,
   SiFirebase,
   SiPython,
@@ -44,7 +42,7 @@ export default function SkillsChart({ skills }: { skills: Skill[] }) {
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
       {skills.map((skill, index) => (
         <motion.div
-          key={skill.name}
+          key={index}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0 }}

@@ -20,19 +20,22 @@ export default function ExperiencePage() {
           Professional Journey
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto animate-fadeIn">
-          My career path and the valuable experiences I've gained along the way
+          My career path and the valuable experiences I&apos;ve gained along the way
         </p>
       </div>
-      
+
       <div className="max-w-4xl mx-auto relative">
         {/* Decorative elements */}
         <div className="absolute -left-8 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-blue-500 to-transparent hidden md:block"></div>
         <div className="absolute -right-8 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-purple-500 to-transparent hidden md:block"></div>
-        
+
         <div className="bg-white dark:bg-slate-800/50 rounded-xl p-6 md:p-8 shadow-lg border border-slate-200 dark:border-slate-700 backdrop-blur-sm">
           <ExperienceTimeline experiences={experiences} />
-          
-          <div className="mt-12 text-center animate-fadeIn" style={{ animationDelay: "0.3s" }}>
+
+          <div
+            className="mt-12 text-center animate-fadeIn"
+            style={{ animationDelay: "0.3s" }}
+          >
             <p className="text-slate-500 dark:text-slate-400 mb-4">
               Currently seeking new opportunities to grow and contribute
             </p>
@@ -40,7 +43,7 @@ export default function ExperiencePage() {
               href="/contact"
               className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105"
             >
-              Let's Connect
+              Let&apos;s Connect
             </a>
           </div>
         </div>
