@@ -17,12 +17,30 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80; // Adjust this value based on your navbar height
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      setMobileMenuOpen(false);
+    }
+  };
+
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Skills", path: "/skills" },
-    { name: "Experience", path: "/experience" },
-    { name: "Projects", path: "/projects" },
+    { name: "Home", path: "home" },
+    { name: "About", path: "about" },
+    { name: "Skills", path: "skill" },
+    { name: "Experience", path: "experience" },
+    { name: "Projects", path: "project" },
   ];
 
   if (!isMounted) return null;
@@ -38,19 +56,20 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link 
           href="/" 
+          scroll = {false}
           className={`text-2xl font-bold transition-all duration-300 hover:scale-105 ${
             scrolled ? "text-blue-600" : "text-white dark:text-slate-100"
           }`}
         >
-          <span className="text-blue-600">Dev</span>Portfolio
+          Portfolio
         </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <Link
-                href={link.path}
+              <button
+                onClick={() => scrollToSection(link.path)}
                 className={`transition-all duration-300 font-medium hover:text-blue-600 ${
                   scrolled
                     ? "text-slate-700 dark:text-slate-300"
@@ -58,7 +77,7 @@ const Navbar = () => {
                 }`}
               >
                 {link.name}
-              </Link>
+              </button>
             </li>
           ))}
         </ul>
@@ -112,17 +131,16 @@ const Navbar = () => {
           <ul className="flex flex-col space-y-4 px-4">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <Link
-                  href={link.path}
+                <button
+                  onClick={() => scrollToSection(link.path)}
                   className={`block transition-colors font-medium hover:text-blue-600 ${
                     scrolled 
                       ? "text-slate-700 dark:text-slate-300" 
                       : "text-slate-700 dark:text-slate-300"
                   }`}
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>

@@ -12,7 +12,7 @@ import MainPage from "./mainLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dev Portfolio | Web Developer",
+  title: "Portfolio | Web Developer",
   description: "Personal portfolio of a web developer",
 };
 

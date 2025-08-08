@@ -6,19 +6,19 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
 const socialLinks = [
-    { icon: "mdi:github", url: "https://github.com/yourusername" },
-    { icon: "mdi:linkedin", url: "https://linkedin.com/in/yourusername" },
+    { icon: "mdi:github", url: "https://github.com/yushna417" },
+    { icon: "mdi:linkedin", url: "www.linkedin.com/in/yushna-buddhacharya" },
     { icon: "mdi:twitter", url: "https://twitter.com/yourusername" },
-    { icon: "mdi:email", url: "mailto:youremail@example.com" },
+    { icon: "mdi:email", url: "mailto:buddhacharyay@gmail.com" },
   ];
 
   return (
-    <footer className="bg-slate-800 text-white py-8">
+    <footer className="bg-slate-800 text-white py-8" id="footer">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h2 className="text-2xl font-bold">
-              <span className="text-blue-400">Dev</span>Portfolio
+              Portfolio
             </h2>
             <p className="text-slate-300 mt-2">
               YushnaBuddhacharya © {currentYear} All rights reserved

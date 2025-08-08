@@ -23,7 +23,7 @@ export default function SkillsPage() {
   const SoftSKills = ["Responsive Design", "UI/UX Principles", "Agile Development", "Problem Solving", "REST APIs"]
 
   return (
-    <div className="container mx-auto px-4 py-24">
+    <div id="skill" className="container mx-auto px-4 py-24">
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slideUp bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Technical Skills

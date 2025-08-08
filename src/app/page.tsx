@@ -10,16 +10,16 @@ import profile from "../../public/images/pp.jpg"
 
 export default function Home() {
   return (
-    <main className="pt-24 pb-16 md:pt-24 md:pb-24">
-      <div className="container mx-auto px-6">
+    <main id="home" className="pt-24 pb-16 md:pt-24 md:pb-24 ">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-3xl mb-12 md:mb-0">
+          <div className="md:w-3xl mb-12 md:mb-0 ">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              <h1 className="text-4xl md:text-[2.6rem] font-bold mb-4">
                 <AnimatedText text="Hi, I'm Yushna Buddhacharya" />
               </h1>
               <h2 className="text-2xl md:text-2xl font-semibold mb-6 text-primary">
@@ -32,13 +32,13 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/projects"
+                  href="#project"
                   className="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary-dark transition-colors"
                 >
                   View Projects
                 </Link>
                 <Link
-                  href="./components/Footer.tsx"
+                  href="#footer"
                   className="px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition-colors"
                 >
                   Contact Me
