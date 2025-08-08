@@ -1,5 +1,4 @@
 import ProjectCard from "../components/ProjectCard";
-import { Project } from "../types/types";
 import { projects } from "../data/Project";
 
 export default function ProjectsPage() {
