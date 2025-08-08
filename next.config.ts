@@ -1,11 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: 'export', 
-  distDir: 'out', 
+module.exports = {
+  output: 'export',
+  distDir: 'out',
   images: {
-    unoptimized: true, 
-  }, 
-};
-
-export default nextConfig;
+    unoptimized: true
+  },
+  // If your repo is NOT yushna417.github.io
+  basePath: '/PortFolio',
+  trailingSlash: true
+}
