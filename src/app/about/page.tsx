@@ -1,11 +1,14 @@
 // src/app/about/page.tsx
 import Image from "next/image";
 import profile from "../../../public/images/SecondPP.jpg";
+import { MdSchool, MdCalendarToday, MdLocationOn } from "react-icons/md";
+import { section } from "framer-motion/client";
 
 export default function AboutPage() {
   return (
-    <div id="about" className="container mx-auto px-4 py-32 md:py-36">
-      <h1 className="text-center text-4xl md:text-5xl mb-12 animate-slideUp bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+    <section className="container mx-auto mb-20">
+      <div id="about" className=" px-4 pt-20 md:py-24 font-sans">
+      <h1 className="text-center text-4xl md:text-5xl mb-16 animate-slideUp bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
         About Me
       </h1>
 
@@ -47,14 +50,66 @@ export default function AboutPage() {
           </p>
 
           <h2 className="text-xl font-bold">What I Do</h2>
-          <p className="text-slate-600 text-base dark:text-slate-300">
+          <p className="text-slate-600 text-base mb-10 dark:text-slate-300">
             I specialize in front-end development with React and Next.js, but
             I&apos;m also comfortable working across the full stack. I&apos;m
             passionate about accessibility, performance, and creating seamless
             user experiences.
           </p>
+
+         
         </div>
       </div>
     </div>
+          
+          
+    <h2 className="text-2xl font-bold mb-6 text-white">Education</h2>
+
+    <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+      <div className="relative p-6 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-600  transition-shadow w-full md:w-1/2 group">
+        <div className="absolute top-0 right-0 w-16 h-16 bg-blue-500/5 rounded-bl-full"></div>
+        <div className="flex items-start mb-4 h-24">
+          <div className="bg-blue-100 p-3 rounded-lg mr-4 group-hover:bg-blue-200 transition-colors">
+            <MdSchool className="text-blue-600" size={24} />
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-blue-200">Bachelor of Computer Science in Computing and Information Technology (BSc.CIT)</h3>
+          </div>
+        </div>
+        <div className="flex items-center text-slate-600 mb-3">
+          <MdLocationOn className="text-blue-500 mr-2" size={18} />
+          <span className="text-sm">Asian Institute of Technology and Management, Lalitpur</span>
+        </div>
+        <div className="flex items-center text-slate-600">
+          <MdCalendarToday className="text-blue-500 mr-2" size={18} />
+          <span className="text-sm">2023 - Present (Expected Graduation: 2027)</span>
+        </div>
+        
+      </div>
+
+      <div className="relative p-6  bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-600 hover:shadow-md transition-shadow w-full md:w-1/2 group">
+        <div className="absolute top-0 right-0 w-16 h-16 bg-slate-500/5 rounded-bl-full"></div>
+        <div className="flex items-start mb-4 h-24">
+          <div className="bg-slate-100 p-3 rounded-lg mr-4 group-hover:bg-slate-200 transition-colors">
+            <MdSchool className="text-slate-600" size={24} />
+          </div>
+          <div>
+            <h3 className="text-lg font-bold mt-2 text-blue-200">High School (+2 Science Faculty)</h3>
+          </div>
+        </div>
+        <div className="flex items-center text-slate-600 mb-3">
+          <MdLocationOn className="text-slate-500 mr-2" size={18} />
+          <span className="text-sm">Unique Academy, Lalitpur</span>
+        </div>
+        <div className="flex items-center text-slate-600">
+          <MdCalendarToday className="text-slate-500 mr-2" size={18} />
+          <span className="text-sm">2019 - 2021</span>
+        </div>
+        
+      </div>
+    </div>
+                   
+    </section>
+    
   );
 }

@@ -4,7 +4,7 @@ import { Skill } from "../types/types";
 
 export default function SkillsPage() {
   const data: Skill[] = [
-    { name: "HTML/CSS", level: 90,  icon: "html" },
+    { name: "HTML", level: 90,  icon: "html" },
     { name: "JavaScript", level: 50,  icon: "javascript" },
     { name: "TypeScript", level: 45,  icon: "typescript" },
     { name: "React", level: 45,  icon: "react" },

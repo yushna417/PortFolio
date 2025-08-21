@@ -47,9 +47,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${
+      className={`fixed w-full z-50 transition-all duration-500 h-16 ${
         scrolled
-          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm shadow-sm py-3"
+          ? "bg-[#001542]/60  backdrop-blur-sm shadow-sm py-3"
           : "bg-transparent py-6"
       }`}
     >
@@ -70,7 +70,7 @@ const Navbar = () => {
             <li key={link.name}>
               <button
                 onClick={() => scrollToSection(link.path)}
-                className={`transition-all duration-300 font-medium hover:text-blue-600 ${
+                className={`transition-all duration-300 font-medium text-base font-sans hover:text-blue-600 ${
                   scrolled
                     ? "text-slate-700 dark:text-slate-300"
                     : "text-white dark:text-slate-200"

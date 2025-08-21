@@ -23,7 +23,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
+    <div className="fixed font-sans inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
       <div 
         className="relative bg-white dark:bg-slate-800 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}

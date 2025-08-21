@@ -28,7 +28,7 @@ const iconComponents: Record<string, JSX.Element> = {
   ReactNative: <SiReactNative color="#61DAFB" size={24} />,
   "Next.js": <SiNextdotjs color="currentColor" size={24} />,
   "Tailwind CSS": <SiTailwindcss color="#38B2AC" size={24} />,
-  Django: <SiDjango color="#092E20" size={24} />,
+  Django: <SiDjango color="#038c3e" size={24} />,
   Firebase: <SiFirebase color="#FFCA28" size={24} />,
   Python: <SiPython color="#3776AB" size={24} />,
   PostgreSQL: <SiPostgresql color="#336791" size={24} />,
@@ -39,7 +39,7 @@ const iconComponents: Record<string, JSX.Element> = {
 
 export default function SkillsChart({ skills }: { skills: Skill[] }) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 font-sans">
       {skills.map((skill, index) => (
         <motion.div
           key={index}
@@ -50,7 +50,7 @@ export default function SkillsChart({ skills }: { skills: Skill[] }) {
           className="flex flex-col items-center p-6 rounded-xl  bg-white dark:bg-slate-800 hover:dark:bg-slate-900 shadow-sm hover:shadow-md border border-gray-100 dark:border-slate-700 transition-all"
         >
           <div className="relative mb-4">
-            {iconComponents[skill.name] || <SiPython color="#3776AB" size={24} />}
+            {iconComponents[skill.name] || <SiHtml5 color="#E44D26" size={24} /> }
           </div>
           <span className="font-medium text-center text-gray-800 dark:text-gray-200">
             {skill.name}
@@ -75,7 +75,7 @@ export default function SkillsChart({ skills }: { skills: Skill[] }) {
 
 function getSkillColor(skillName: string): string {
   const colorMap: Record<string, string> = {
-    "HTML/CSS": "#E44D26",
+    "HTML": "#E44D26",
     JavaScript: "#F0DB4F",
     TypeScript: "#3178C6",
     React: "#61DAFB",
@@ -83,7 +83,7 @@ function getSkillColor(skillName: string): string {
     "Next.js": "currentColor",
     "Tailwind CSS": "#38B2AC",
     "Ant Design": "#0170FE",
-    Django: "#092E20",
+    Django: "#038c3e",
     Python: "#3776AB",
     Firebase: "#FFCA28",
     PostgreSQL: "#336791",

@@ -16,7 +16,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <>
       <div 
-        className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300 cursor-pointer h-full flex flex-col p-5"
+        className="bg-white font-sans dark:bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300 cursor-pointer h-full flex flex-col p-5"
         onClick={() => setIsModalOpen(true)}
       >
         {/* Image with fixed aspect ratio */}
