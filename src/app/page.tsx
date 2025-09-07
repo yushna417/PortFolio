@@ -7,10 +7,12 @@ import { MdMarkEmailUnread   , MdOutlineShareLocation } from "react-icons/md";
 
 import profile from "../../public/images/pp.jpg"
 
+
 export default function Home() {
+  
   return (
     <main id="home" className="pt-20 pb-16 md:pt-24 md:pb-24 font-sans ">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -20,7 +22,7 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-32 h-32 bg-blue-600/20 rounded-full translate-y-25 -translate-x-15"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-sky-700/20 rounded-full translate-y-12 translate-x-5"></div>
           
-          <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 ">
             <div className="flex flex-col gap-1.5">
               <div className="flex items-center text-white text-lg font-medium">
                 <MdOutlineShareLocation className="mr-4 text-slate-300" size={24}/>
@@ -31,9 +33,11 @@ export default function Home() {
                 <MdMarkEmailUnread    className="mr-4 text-slate-300" size={24}/>
                 <span>buddhacharyay@gmail.com</span>
               </div>
-              
             </div>
+             
           </div>
+
+           
         </motion.div>
 
 

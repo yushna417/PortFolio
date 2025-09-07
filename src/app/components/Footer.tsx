@@ -7,7 +7,7 @@ const Footer = () => {
 
 const socialLinks = [
     { icon: "mdi:github", url: "https://github.com/yushna417" },
-    { icon: "mdi:linkedin", url: "www.linkedin.com/in/yushna-buddhacharya" },
+    { icon: "mdi:linkedin", url: "https://www.linkedin.com/in/yushna-buddhacharya/" },
     { icon: "mdi:twitter", url: "https://twitter.com/yourusername" },
     { icon: "mdi:email", url: "mailto:buddhacharyay@gmail.com" },
   ];
