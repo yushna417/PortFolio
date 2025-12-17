@@ -50,7 +50,7 @@ const Navbar = () => {
       className={`fixed w-full z-50 transition-all duration-500 h-16 ${
         scrolled
           ? "bg-[#001542]/60  backdrop-blur-sm shadow-sm py-3"
-          : "bg-transparent py-6"
+          : "bg-transparent py-6 border-b border-gray-400 shadow-xl"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -58,7 +58,7 @@ const Navbar = () => {
           href="/" 
           scroll = {false}
           className={`text-2xl font-bold transition-all duration-300 hover:scale-105 ${
-            scrolled ? "text-blue-600" : "text-white dark:text-slate-100"
+            scrolled ? "text-blue-600" : "text-blue-950 dark:text-slate-100"
           }`}
         >
           Portfolio
@@ -72,8 +72,8 @@ const Navbar = () => {
                 onClick={() => scrollToSection(link.path)}
                 className={`transition-all duration-300 font-medium text-base font-sans hover:text-blue-600 ${
                   scrolled
-                    ? "text-slate-700 dark:text-slate-300"
-                    : "text-white dark:text-slate-200"
+                    ? "text-slate-900 dark:text-slate-300"
+                    : "text-blue-950 dark:text-slate-200"
                 }`}
               >
                 {link.name}
@@ -89,30 +89,30 @@ const Navbar = () => {
         >
           <div className="w-6 flex flex-col space-y-1.5">
             <span
-              className={`h-0.5 w-full transition-all ${
+              className={`h-1 w-full transition-all ${
                 mobileMenuOpen 
                   ? "rotate-45 translate-y-2 bg-white" 
                   : scrolled 
                     ? "bg-slate-700 dark:bg-slate-300" 
-                    : "bg-white"
+                    : "dark:bg-white bg-blue-950"
               }`}
             ></span>
             <span
-              className={`h-0.5 w-full transition-all ${
+              className={`h-1 w-full transition-all ${
                 mobileMenuOpen 
                   ? "opacity-0" 
                   : scrolled 
                     ? "bg-slate-700 dark:bg-slate-300" 
-                    : "bg-white"
+                    : "dark:bg-white bg-blue-950"
               }`}
             ></span>
             <span
-              className={`h-0.5 w-full transition-all ${
+              className={`h-1 w-full transition-all ${
                 mobileMenuOpen 
                   ? "-rotate-45 -translate-y-2 bg-white" 
                   : scrolled 
                     ? "bg-slate-700 dark:bg-slate-300" 
-                    : "bg-white"
+                    : "dark:bg-white bg-blue-950"
               }`}
             ></span>
           </div>

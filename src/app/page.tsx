@@ -49,7 +49,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white text-blue-900">
                 <AnimatedText text="Hi, I'm Yushna Buddhacharya" />
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-sky-600">
@@ -73,11 +73,11 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-white dark:bg-slate-800 rounded-2xl -rotate-10 -z-10"></div>
+              <div className="absolute inset-0 bg-indigo-900/90 shadow-2xl dark:bg-slate-800 rounded-2xl -rotate-10 -z-10"></div>
               <Image
                 src={profile}
                 alt="Yushna Buddhacharya"
-                className="w-full max-w-md mx-auto rounded-2xl shadow-xl object-cover"
+                className="w-full max-w-md mx-auto rounded-2xl shadow-3xl object-cover"
                 width={320}
                 height={320}
                 priority

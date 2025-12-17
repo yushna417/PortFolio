@@ -63,7 +63,7 @@ export default function AboutPage() {
     </div>
           
           
-    <h2 className="text-2xl font-bold mb-6 text-white">Education</h2>
+    <h2 className="text-2xl font-bold mb-6 dark:text-white text-blue-900">Education</h2>
 
     <div className="flex flex-col md:flex-row gap-6 md:gap-8">
       <div className="relative p-6 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-600  transition-shadow w-full md:w-1/2 group">
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <MdSchool className="text-blue-600" size={24} />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-blue-200">Bachelor of Computer Science in Computing and Information Technology (BSc.CIT)</h3>
+            <h3 className="text-lg font-bold text-blue-900 dark:text-blue-200">Bachelor of Computer Science in Computing and Information Technology (BSc.CIT)</h3>
           </div>
         </div>
         <div className="flex items-center text-slate-600 mb-3">
@@ -94,7 +94,7 @@ export default function AboutPage() {
             <MdSchool className="text-slate-600" size={24} />
           </div>
           <div>
-            <h3 className="text-lg font-bold mt-2 text-blue-200">High School (+2 Science Faculty)</h3>
+            <h3 className="text-lg font-bold mt-2 text-indigo-950 dark:text-blue-200">High School (+2 Science Faculty)</h3>
           </div>
         </div>
         <div className="flex items-center text-slate-600 mb-3">

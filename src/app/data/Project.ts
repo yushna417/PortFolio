@@ -74,14 +74,27 @@ export const projects: Project[] = [
   },
   {
     title: "Weather App",
-    technologies: ["Django", "HTML", "Tailwind CSS"],
-    url: "#",
+    technologies: ["React", "Tailwind CSS", "Unsplash"],
+    url: "https://yushna417.github.io/WeatherAppReact/",
     images: {
-      main: "/images/WeatherWebAPP.png",
+      main: "/images/weatherApp.png",
       
     },
     details: {
-          description: "A productivity application for organizing tasks with drag-and-drop functionality.",
+          description: "A React-based Weather App provides real-time weather information for searched locations, including temperature, humidity, wind speed, and weather conditions. It dynamically fetches location-based images using the Unsplash API to enhance visual context. Built with JavaScript and styled using Tailwind CSS, the app offers a clean, responsive, and user-friendly interface.",
+
+    }
+  },
+  {
+    title: "Dummy Blog Website",
+    technologies: ["Next", "Tailwind CSS", "FlowBite"],
+    url: "https://dummy-blog-website.vercel.app/",
+    images: {
+      main: "/images/dummyBlog.png",
+      
+    },
+    details: {
+          description: "A dummy website that allows users to search and view blog posts with detailed content. It fetches posts and comments dynamically using the JSONPlaceholder API. Built with JavaScript, NEXT and styled using Tailwind CSS, the app provides a simple, interactive, and responsive interface for exploring blogs and their associated comments",
 
     }
   }
