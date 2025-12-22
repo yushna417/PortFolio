@@ -1,30 +1,20 @@
 // src/app/experience/page.tsx
 import ExperienceTimeline from "../components/ExperienceTimeline";
-import { Experience } from "../types/types";
+import { experiences } from "../data/Experience";
 
-export default function ExperiencePage() {
-  const experiences: Experience[] = [
-    {
-      role: "Frontend Developer",
-      company: "Anweshan Research Company",
-      period: "Feb 2025 - May 2025",
-      description:
-        "Developed and maintained responsive web applications using React and Next.js. Collaborated with designers to implement UI/UX best practices. Implemented modern frontend architectures and optimized application performance.",
-    },
-  ];
-
+export default function ExperiencePage() {  
   return (
-    <div id="experience" className="container mx-auto px-4 py-24">
-      <div className="text-center mb-16">
+    <div id="experience" className="container mx-auto px-14 py-24">
+      <div className="text-left mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slideUp bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Professional Journey
         </h1>
-        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto animate-fadeIn">
+        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl animate-fadeIn">
           My career path and the valuable experiences I&apos;ve gained along the way
         </p>
       </div>
 
-      <div className="max-w-4xl mx-auto relative">
+      <div className="max-w-6xl relative">
         {/* Decorative elements */}
         <div className="absolute -left-8 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-blue-500 to-transparent hidden md:block"></div>
         <div className="absolute -right-8 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-purple-500 to-transparent hidden md:block"></div>

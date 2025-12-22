@@ -12,15 +12,15 @@ export default function Home() {
   
   return (
     <main id="home" className="pt-20 pb-16 md:pt-24 md:pb-24 font-sans ">
-      <div className="container mx-auto px-4 ">
+      <div className="container mx-auto px-14 ">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative bg-gradient-to-r from-blue-900 to-indigo-950 px-6 py-8 h-44 rounded-2xl  shadow-lg mb-12 overflow-hidden"
+          className="relative bg-gradient-to-r from-blue-950 to-indigo-950 px-6 py-8 h-44 rounded-2xl  shadow-lg mb-12 overflow-hidden"
         >
-          <div className="absolute top-0 left-0 w-32 h-32 bg-blue-600/20 rounded-full translate-y-25 -translate-x-15"></div>
-          <div className="absolute bottom-0 left-0 w-24 h-24 bg-sky-700/20 rounded-full translate-y-12 translate-x-5"></div>
+          <div className="absolute top-0 left-0 w-32 h-32 bg-blue-900/20 rounded-full translate-y-25 -translate-x-15"></div>
+          <div className="absolute bottom-0 left-0 w-24 h-24 bg-sky-800/20 rounded-full translate-y-12 translate-x-5"></div>
           
           <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 ">
             <div className="flex flex-col gap-1.5">

@@ -26,3 +26,9 @@ export type Project = {
     description?: string
   };
 };
+
+export type Education = {
+  title: string;
+  instituteName: string;
+  year: string;
+}

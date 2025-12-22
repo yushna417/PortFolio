@@ -1,34 +1,17 @@
 // src/app/skills/page.tsx
 import SkillsChart from "../components/SkillsChart";
-import { Skill } from "../types/types";
+import { skills } from "../data/skill";
 
 export default function SkillsPage() {
-  const data: Skill[] = [
-    { name: "HTML", level: 90,  icon: "html" },
-    { name: "JavaScript", level: 50,  icon: "javascript" },
-    { name: "TypeScript", level: 45,  icon: "typescript" },
-    { name: "React", level: 45,  icon: "react" },
-    { name: "ReactNative", level: 45,  icon: "react" },
-    { name: "Next.js", level: 45,  icon: "nextjs" },
-    { name: "Tailwind CSS", level: 65,  icon: "tailwind" },
-    { name: "Django", level: 50,  icon: "django" },
-    { name: "Firebase", level: 45,  icon: "firebase" },
-    { name: "Python", level: 50,  icon: "python" },
-    { name: "PostgreSQL", level: 50,  icon: "PostgreSQL" },
-    { name: "NumPy", level: 50,  icon: "numpy" },
-    { name: "Pandas", level: 50,  icon: "pandas" },
-    { name: "Git", level: 50,  icon: "git" },
-  ];
-   
   const SoftSKills = ["Responsive Design", "UI/UX Principles", "Agile Development", "Problem Solving", "REST APIs"]
 
   return (
-    <div id="skill" className="container mx-auto px-4 py-24">
-      <div className="text-center mb-16">
+    <div id="skill" className="container mx-auto px-14 py-24">
+      <div className="text-left mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slideUp bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Technical Skills
         </h1>
-        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto animate-fadeIn">
+        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl animate-fadeIn">
           The tools and technologies I use to bring ideas to life
         </p>
       </div>
@@ -37,7 +20,7 @@ export default function SkillsPage() {
         <div className="grid-rows-2 space-y-32">
           <div className="animate-fadeIn grid-cols-4 md:grid-cols-8">           
                 <SkillsChart 
-                skills={data}/>
+                skills={skills}/>
           </div>
           
           
