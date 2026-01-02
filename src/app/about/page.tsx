@@ -1,16 +1,14 @@
-"use client"
-import Image from "next/image";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import profile from "../../../public/images/SecondPP.jpg";
-import { ControlledSwitch } from "../components/ui/switch";
+"use client";
+
+import { AnimatePresence, motion } from "framer-motion";
 import { educations } from "../data/education";
 import { TimelineItem } from "../components/educationTimeline";
+import { useState } from "react";
+import { ControlledSwitch } from "../components/ui/switch";
 
 export default function AboutPage() {
   const [mode, setMode] = useState<"left" | "right">("left");
-  
-  const containerVariants = {
+    const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
@@ -22,44 +20,57 @@ export default function AboutPage() {
   };
 
   const aboutContent = (
-    <motion.div
-      key="about-content"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="space-y-6"
-    >
-      <motion.div >
-        <h2 className="text-xl font-bold">Who I Am</h2>
-        <p className="text-slate-600 text-base dark:text-slate-300">
-          I&apos;m a passionate web developer with a focus on creating
-          beautiful, functional, and user-friendly digital experiences. With a
-          background in Computing and Information Technology, and a love for
-          problem-solving, I enjoy turning complex problems into simple,
-          intuitive solutions.
-        </p>
-      </motion.div>
+    <div className="flex flex-col space-y-8">
+      <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="max-w-3xl text-slate-400 text-sm md:text-base"
+        >
+          I’m a passionate web developer focused on building clean, scalable,
+          and user-centric digital experiences using modern technologies.
+      </motion.p>
 
-      <motion.div >
-        <h2 className="text-xl font-bold">My Journey</h2>
-        <p className="text-slate-600 text-base dark:text-slate-300">
-          My journey in web development started in college when I built my
-          first website. Since then, I&apos;ve been constantly learning and
-          expanding my skill set to include modern web technologies and best
-          practices.
-        </p>
-      </motion.div>
-
-      <motion.div >
-        <h2 className="text-xl font-bold">What I Do</h2>
-        <p className="text-slate-600 text-base dark:text-slate-300">
-          I specialize in front-end development with React and Next.js, but
-          I&apos;m also comfortable working across the full stack. I&apos;m
-          passionate about accessibility, performance, and creating seamless
-          user experiences.
-        </p>
-      </motion.div>
-    </motion.div>
+      {/* Info Cards */}
+      <div className="grid md:grid-cols-3 gap-6">
+        {[
+          {
+            title: "Who I Am",
+            text:
+              "A computing and IT student with a strong interest in web development, problem-solving, and modern UI engineering.",
+          },
+          {
+            title: "My Journey",
+            text:
+              "My journey started in college with my first website and evolved into building real-world projects using React, Next.js, and backend technologies.",
+          },
+          {
+            title: "What I Do",
+            text:
+              "I specialize in frontend development but enjoy working across the stack, focusing on performance, accessibility, and clean architecture.",
+          },
+        ].map((item, index) => (
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            className="rounded-2xl border border-white/10
+              bg-white/5 backdrop-blur-md p-6 space-y-3
+              hover:border-blue-500/40 transition-colors"
+          >
+            <h3 className="text-lg font-semibold text-slate-200">
+              {item.title}
+            </h3>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              {item.text}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
   );
 
   const educationContent = (
@@ -78,53 +89,37 @@ export default function AboutPage() {
   );
 
   return (
-    <section className="container mx-auto px-5 md:px-14 mb-20" id="about">
-      <motion.h1 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-4xl md:text-5xl pt-16 md:pt-20 animate-slideUp bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-      >
-        About Me
-      </motion.h1>
-      
-      <div className="font-sans py-10 md:pt-6">
-        <div className={`flex flex-col ${mode === "left" ? "md:flex-row" : "md:flex-row-reverse"} gap-10`}>
-          
-          <div className="md:w-1/3 pt-28">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative w-56 h-56 md:w-80 md:h-80 mx-auto rounded-3xl overflow-hidden border-4 border-blue-950 shadow-lg"
-            >
-              <Image
-                src={profile}
-                alt="Developer"
-                className="w-full h-full object-cover"
-                width={320}
-                height={320}
-                priority
-              />
-            </motion.div>
-          </div>
+    <section
+      id="about"
+      className="container mx-auto px-5 md:px-14 py-20 space-y-16"
+    >
+      {/* Heading */}
 
-          <div className={`md:w-2/3 flex flex-col ${mode === "left" ? "items-end" : "items-start"} space-y-16`}>
-            <ControlledSwitch 
-              leftText="A Little About Me" 
-              rightText="Education" 
-              value={mode} 
-              onChange={setMode} 
-            />
+      <div className="flex md:flex-row flex-col justify-between items-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl font-bold
+            bg-gradient-to-r from-blue-600 to-purple-950
+            bg-clip-text text-transparent"
+        >
+          About Me
+        </motion.h1>
 
-            <div className="w-full">
+        <ControlledSwitch leftText="A Little About Me" rightText="Education" value={mode} onChange={setMode} />
+      </div>
+
+
+
+      <div className="w-full">
               <AnimatePresence mode="wait">
                 {mode === "left" ? aboutContent : educationContent}
               </AnimatePresence>
             </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
+
+

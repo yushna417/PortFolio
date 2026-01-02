@@ -21,3 +21,17 @@ body {
     @apply cursor-pointer;
   }
 }
+
+/* Add to your global.css or tailwind.config.js for shimmer animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}

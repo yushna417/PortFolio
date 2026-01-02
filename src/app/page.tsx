@@ -24,12 +24,12 @@ export default function Home() {
           
           <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 ">
             <div className="flex flex-col gap-1.5">
-              <div className="flex items-center text-white text-lg font-medium">
+              <div className="flex items-center text-slate-300 text-lg font-medium">
                 <MdOutlineShareLocation className="mr-4 text-slate-300" size={24}/>
                 <span>Imadol, Lalitpur</span>
               </div>
               
-              <div className="flex items-center text-white text-lg font-medium font-sans">
+              <div className="flex items-center text-slate-300 text-lg font-medium font-sans">
                 <MdMarkEmailUnread    className="mr-4 text-slate-300" size={24}/>
                 <span>buddhacharyay@gmail.com</span>
               </div>
@@ -49,7 +49,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white text-blue-900">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-slate-400 ">
                 <AnimatedText text="Hi, I'm Yushna Buddhacharya" />
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-sky-600">
@@ -73,11 +73,11 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-indigo-900/90 shadow-2xl dark:bg-slate-800 rounded-2xl -rotate-10 -z-10"></div>
+              <div className="absolute inset-0 shadow-2xl bg-slate-800 rounded-2xl -rotate-10 -z-10"></div>
               <Image
                 src={profile}
                 alt="Yushna Buddhacharya"
-                className="w-full max-w-md mx-auto rounded-2xl shadow-3xl object-cover"
+                className="w-full max-w-sm mx-auto rounded-2xl shadow-3xl object-cover border-2 border-slate-400"
                 width={320}
                 height={320}
                 priority

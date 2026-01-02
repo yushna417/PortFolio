@@ -6,9 +6,11 @@ export default function ExperiencePage() {
   return (
     <div id="experience" className="container mx-auto px-14 py-24">
       <div className="text-left mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slideUp bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Professional Journey
-        </h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-left">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-950 bg-clip-text text-transparent">
+              Professional Journey
+            </span>
+          </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl animate-fadeIn">
           My career path and the valuable experiences I&apos;ve gained along the way
         </p>
@@ -31,7 +33,7 @@ export default function ExperiencePage() {
             </p>
             <a
               href="/contact"
-              className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:scale-105"
+              className="inline-block bg-gradient-to-r from-blue-950 to-purple-950 text-white px-6 py-3 rounded-full shadow-md shadow-slate-600 hover:shadow-lg transition-all hover:scale-105"
             >
               Let&apos;s Connect
             </a>
