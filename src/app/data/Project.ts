@@ -2,6 +2,7 @@ import { Project } from "@/app/types/types";
 
 export const projects: Project[] = [
   {
+    id: 1,
     title: "Hire Enumerator",
     technologies: ["TypeScript", "React", "Ant Design", "Firebase"],
     url: "https://hireenumerator.com",
@@ -20,6 +21,7 @@ export const projects: Project[] = [
     },
   },
   {
+    id: 2,
     title: "Grafx International",
     technologies: ["JavaScript", "React", "Firebase"],
     url: "https://grafxint.com/",
@@ -38,6 +40,7 @@ export const projects: Project[] = [
     },
   },
   {
+    id: 3,
     title: "Anweshan Agro",
     technologies: ["Next.js", "TypeScript"],
     url: "https://anweshanagro-f36a5.web.app/",
@@ -55,24 +58,7 @@ export const projects: Project[] = [
     },
   },
   {
-    title: "Smart Medicine Dispenser - Innovation Project Module",
-    technologies: ["Python", "HTML & CSS", "Flask", "RaspberryPi & Sensors"],
-    url: "#",
-    images: {
-      main: "/images/SmartMedicine.jpg",
-      others: [
-        "/images/3Ddiagram.png",
-        "/images/ConnectionSM.png",
-      
-      ]
-    },
-    videoUrl: "/images/Untitled video - Made with Clipchamp (2).mp4",
-    details: {
-        description: "A full-featured online store with product listings, cart functionality, and checkout process.",
-
-    }
-  },
-  {
+    id: 4,
     title: "Weather App",
     technologies: ["React", "Tailwind CSS", "Unsplash"],
     url: "https://yushna417.github.io/WeatherAppReact/",
@@ -86,6 +72,7 @@ export const projects: Project[] = [
     }
   },
   {
+    id: 5,
     title: "Dummy Blog Website",
     technologies: ["Next", "Tailwind CSS", "FlowBite"],
     url: "https://dummy-blog-website.vercel.app/",

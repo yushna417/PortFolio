@@ -4,7 +4,7 @@ import { experiences } from "../data/Experience";
 
 export default function ExperiencePage() {  
   return (
-    <div id="experience" className="container mx-auto px-14 py-24">
+    <div id="experience" className="container mx-auto md:px-14 px-4 py-24">
       <div className="text-left mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-left">
             <span className="bg-gradient-to-r from-blue-600 to-purple-950 bg-clip-text text-transparent">
@@ -21,7 +21,7 @@ export default function ExperiencePage() {
         <div className="absolute -left-8 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-blue-500 to-transparent hidden md:block"></div>
         <div className="absolute -right-8 top-0 h-full w-0.5 bg-gradient-to-b from-transparent via-purple-500 to-transparent hidden md:block"></div>
 
-        <div className="bg-white dark:bg-slate-800/50 rounded-xl p-6 md:p-8 shadow-lg border border-slate-200 dark:border-slate-700 backdrop-blur-sm">
+        <div className="bg-slate-800/50 rounded-xl p-6 md:p-8 shadow-lg border border-slate-700 backdrop-blur-sm">
           <ExperienceTimeline experiences={experiences} />
 
           <div

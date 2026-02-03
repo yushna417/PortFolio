@@ -13,6 +13,7 @@ export type Experience = {
 };
 
 export type Project = {
+  id:number
   title: string;
   technologies: string[];
   url?: string;

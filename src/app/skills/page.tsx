@@ -1,22 +1,13 @@
 // src/app/skills/page.tsx
 "use client";
+import Link from "next/link";
 import SkillsChart from "../components/SkillsChart";
 import { skills } from "../data/skill";
 import { motion } from "framer-motion";
-import { 
-  Lightbulb, 
-  Users, 
-  Zap, 
-  Target,
-  Code
-} from "lucide-react";
 
 export default function SkillsPage() {
-
-
-  // Categorize skills
   const frontendSkills = skills.filter(skill => 
-    ["HTML", "Tailwind CSS", "JavaScript", "TypeScript", "React", "Next.js", "ReactNative" ].includes(skill.name)
+    ["HTML", "Tailwind/CSS", "JavaScript", "TypeScript", "React", "Next.js", "Expo" ].includes(skill.name)
   );
   
   const backendSkills = skills.filter(skill => 
@@ -24,12 +15,12 @@ export default function SkillsPage() {
   );
   
   const otherSkills = skills.filter(skill => 
-    !["HTML", "Tailwind CSS", "JavaScript", "TypeScript", "React","ReactNative", "Next.js",  "Python", "Django", "PostgreSQL", "Firebase"].includes(skill.name)
+    !["HTML", "Tailwind/CSS", "JavaScript", "TypeScript", "React", "Expo", "Next.js",  "Python", "Django", "PostgreSQL", "Firebase"].includes(skill.name)
   );
 
   return (
-    <div id="skill" className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-slate-900 py-12 md:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen py-12 md:py-32 px-5 md:px-14 container mx-auto">
+      <div className=" mx-auto " >
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -42,23 +33,23 @@ export default function SkillsPage() {
               Skills & Expertise
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl text-left">
+          <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-3xl text-left">
             A comprehensive showcase of my technical capabilities and professional competencies
           </p>
         </motion.div>
 
         {/* Main Content */}
         <div className="space-y-20">
-          <section className="space-y-8">            
+          <section className="space-y-8 flex flex-wrap gap-x-8">            
 
             {/* Frontend Skills */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="bg-white dark:bg-slate-800/50 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-slate-700 backdrop-blur-sm"
+              className="bg-slate-800/50 rounded-2xl p-6 md:p-8 shadow-lg border border-slate-700 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-6 pb-3 border-b border-gray-200 dark:border-slate-700">
+              <h3 className="text-xl font-semibold text-white mb-6 pb-3 border-b border-slate-700">
                 Frontend Development
               </h3>
               <SkillsChart skills={frontendSkills} />
@@ -69,9 +60,9 @@ export default function SkillsPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="bg-white dark:bg-slate-800/50 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-slate-700 backdrop-blur-sm"
+              className="bg-slate-800/50 rounded-2xl p-6 md:p-8 shadow-lg border border-slate-700 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-6 pb-3 border-b border-gray-200 dark:border-slate-700">
+              <h3 className="text-xl font-semibold text-white mb-6 pb-3 border-b border-slate-700">
                 Backend & Databases
               </h3>
               <SkillsChart skills={backendSkills} />
@@ -82,15 +73,21 @@ export default function SkillsPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="bg-white dark:bg-slate-800/50 rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 dark:border-slate-700 backdrop-blur-sm"
+              className="bg-slate-800/50 rounded-2xl p-6 md:p-8 shadow-lg border border-slate-700 backdrop-blur-sm"
             >
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-6 pb-3 border-b border-gray-200 dark:border-slate-700">
+              <h3 className="text-xl font-semibold text-white mb-6 pb-3 border-b border-slate-700">
                 Tools & Libraries
               </h3>
               <SkillsChart skills={otherSkills} />
             </motion.div>
           </section>       
         </div>
+      </div>
+       <div className="flex justify-end px-14 mt-20">
+        <Link href="/experience" className="px-6 py-3 border-2 text-white rounded-lg hover:from-gray-800 hover:to-gray-900 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
+              >
+                See what experiences out there -- →
+        </Link>
       </div>
     </div>
   );

@@ -16,17 +16,17 @@ const ExperienceTimeline = ({ experiences }: ExperienceTimelineProps) => {
         >
           
 
-          <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-slate-800 p-4 rounded border border-slate-200 dark:border-slate-700 shadow">
+          <div className="w-[calc(100%)] md:w-[calc(50%-2.5rem)] bg-slate-800 p-4 rounded border border-slate-700 shadow">
             <div className="flex items-center justify-between space-x-2 mb-1">
               <div className="font-bold text-blue-600">{exp.role}</div>
               <time className="font-caption text-slate-500 text-sm">
                 {exp.period}
               </time>
             </div>
-            <div className="text-slate-500 dark:text-slate-300 mb-2">
+            <div className="text-slate-300 mb-2">
               {exp.company}
             </div>
-            <div className="text-slate-600 dark:text-slate-400">
+            <div className="text-slate-400">
               {exp.description}
             </div>
           </div>

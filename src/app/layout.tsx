@@ -5,8 +5,6 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import TransitionEffect from "./components/ui/TransitionEffect";
-import MainPage from "./mainLayout";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,14 +13,18 @@ export const metadata: Metadata = {
   description: "Personal portfolio of a web developer",
 };
 
-export default function RootLayout()  {
+export default function RootLayout({children}:{children:React.ReactNode})  {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-gray-50 dark:bg-slate-900 font-sans`}>
-        <TransitionEffect />
-        <Navbar />
-          <MainPage/>
-        <Footer />
+      <body className={`${inter.className} bg-green-900 font-sans`}>
+        <div className="pointer-events-none fixed inset-0 z-10 opacity-[0.02]  object-contain"
+          style={{ backgroundImage: "url('/images/image.png')" }}
+        />
+          <TransitionEffect />
+          <Navbar />
+            {children}
+          <Footer />
+        <div/>
       </body>
     </html>
   );

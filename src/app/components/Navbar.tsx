@@ -7,15 +7,14 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", path: "#home" },
-    { name: "About", path: "#about" },
-    { name: "Skills", path: "#skill" },
-    { name: "Experience", path: "#experience" },
-    { name: "Projects", path: "#project" },
+    { name: "Home", path: "/" },
+    { name: "Skills", path: "/skills" },
+    { name: "Experience", path: "/experience" },
+    { name: "Projects", path: "/projects" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 h-16  backdrop-blur-md border-b border-white/10">
+    <nav className="fixed w-full z-50 h-16  backdrop-blur-md border border-white/10">
       <div className="container mx-auto px-4 flex justify-between items-center h-full">
         <div className="flex gap-4">
           <img src="images/logo1.png

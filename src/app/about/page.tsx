@@ -26,7 +26,7 @@ export default function AboutPage() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="max-w-3xl text-slate-400 text-sm md:text-base"
+          className="max-w-3xl text-slate-400 text-md md:text-lg"
         >
           I’m a passionate web developer focused on building clean, scalable,
           and user-centric digital experiences using modern technologies.
@@ -103,7 +103,7 @@ export default function AboutPage() {
           transition={{ duration: 0.5 }}
           className="text-4xl md:text-5xl font-bold
             bg-gradient-to-r from-blue-600 to-purple-950
-            bg-clip-text text-transparent"
+            bg-clip-text text-transparent md:mb-1 mb-6"
         >
           About Me
         </motion.h1>

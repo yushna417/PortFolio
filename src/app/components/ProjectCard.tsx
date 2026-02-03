@@ -1,24 +1,41 @@
 // src/components/ProjectCard.tsx
 "use client";
 
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Project } from "../types/types";
-import ProjectModal from "./ProjectModal";
 
 type ProjectCardProps = {
   project: Project;
 };
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
-      <div 
-        className="bg-white font-sans dark:bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] transition-transform duration-300 cursor-pointer h-full flex flex-col border-2 border-blue-950"
-        onClick={() => setIsModalOpen(true)}
+      <div
+        className="
+          group
+          bg-white font-sans dark:bg-slate-800
+          rounded-lg overflow-hidden
+          shadow-lg
+          cursor-pointer
+          h-full
+          flex flex-col
+          border-2 border-blue-950
+          min-w-[20vw]
+          flex-1
+          transform origin-left
+          transition-all duration-300 ease-out
+          hover:flex-[1.15]
+          hover:shadow-2xl
+          hover:shadow-gray-400
+        "
+        onClick={() => router.push(`/projects/${project.id}`)}
+
       >
+
         <div className="relative aspect-video overflow-hidden">
           <Image
             src={project.images.main}
@@ -51,10 +68,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
             <button 
               className="text-indigo-600 hover:underline text-sm text-right right"
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsModalOpen(true);
-              }}
+              onClick={() => router.push(`/projects/${project.id}`)}
+
             >
               View Details
             </button>
@@ -65,11 +80,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
       </div>
 
-      <ProjectModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)}
-        project={project}
-      />
+
     </>
   );
 };
