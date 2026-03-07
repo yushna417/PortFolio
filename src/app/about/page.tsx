@@ -2,17 +2,17 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { educations } from "../data/education";
-import { TimelineItem } from "../components/educationTimeline";
+import { TimelineItem } from "../../components/educationTimeline";
 import { useState } from "react";
-import { ControlledSwitch } from "../components/ui/switch";
+import { ControlledSwitch } from "../../components/ui/switch";
 
 export default function AboutPage() {
   const [mode, setMode] = useState<"left" | "right">("left");
-    const containerVariants = {
+  const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
-      transition: { 
+      transition: {
         staggerChildren: 0.1,
         delayChildren: 0.2
       }
@@ -22,14 +22,14 @@ export default function AboutPage() {
   const aboutContent = (
     <div className="flex flex-col space-y-8">
       <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="max-w-3xl text-slate-400 text-md md:text-lg"
-        >
-          I’m a passionate web developer focused on building clean, scalable,
-          and user-centric digital experiences using modern technologies.
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="max-w-3xl text-slate-400 text-md md:text-lg"
+      >
+        I’m a passionate web developer focused on building clean, scalable,
+        and user-centric digital experiences using modern technologies.
       </motion.p>
 
       {/* Info Cards */}
@@ -76,7 +76,7 @@ export default function AboutPage() {
   const educationContent = (
     <motion.div
       key="education-content"
-      
+
       initial="hidden"
       animate="visible"
       exit="exit"
@@ -114,10 +114,10 @@ export default function AboutPage() {
 
 
       <div className="w-full">
-              <AnimatePresence mode="wait">
-                {mode === "left" ? aboutContent : educationContent}
-              </AnimatePresence>
-            </div>
+        <AnimatePresence mode="wait">
+          {mode === "left" ? aboutContent : educationContent}
+        </AnimatePresence>
+      </div>
     </section>
   );
 }

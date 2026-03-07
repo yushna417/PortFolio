@@ -69,17 +69,7 @@ export default async function ProjectPage({ params }: PageProps) {
                       <span className="font-medium">Visit Live Project</span>
                     </a>
                   )}
-                  {project.videoUrl && (
-                    <a
-                      href={project.videoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-0.5 shadow-md hover:shadow-lg"
-                    >
-                      <Play className="w-4 h-4" />
-                      <span className="font-medium">Watch Demo Video</span>
-                    </a>
-                  )}
+                  
                 </div>
               </div>
             </div>
@@ -183,46 +173,9 @@ export default async function ProjectPage({ params }: PageProps) {
           </div>
 
 
-          {/* Video Demo Section */}
-          {project.videoUrl && (
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Project Demo</h2>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <div className="aspect-video">
-                  <iframe
-                    src={project.videoUrl}
-                    className="w-full h-full"
-                    allowFullScreen
-                    title={`${project.title} demo video`}
-                  />
-                </div>
-                <div className="absolute top-4 right-4">
-                  <div className="px-4 py-2 bg-black/60 backdrop-blur-sm rounded-full">
-                    <span className="text-white text-sm font-medium flex items-center gap-2">
-                      <Play className="w-4 h-4" />
-                      Interactive Demo
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+          
 
-          {/* Next Project Navigation */}
-          <div className="border-t border-gray-200 pt-8 mt-8">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-200 mb-2">Explore More Projects</h3>
-                <p className="text-gray-600">Check out other innovative solutions in our portfolio</p>
-              </div>
-              <Link
-                href="/projects"
-                className="px-6 py-3 bg-gradient-to-r from-gray-700 to-black text-white rounded-lg hover:from-gray-800 hover:to-gray-900 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
-              >
-                View All Projects
-              </Link>
-            </div>
-          </div>
+       
         </div>
       </div>
     </div>

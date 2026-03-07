@@ -1,25 +1,20 @@
 "use client";
 
-import { useState } from "react";
-import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/Project";
+import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRouter } from "next/navigation";
 
-const ITEMS_PER_VIEW = 2; // desktop
 
 export default function ProjectsPage() {
-  const [index, setIndex] = useState(0);
-  const maxIndex = Math.max(0, projects.length - ITEMS_PER_VIEW);
-
-  const next = () => {
-    setIndex((prev) => Math.min(prev + 1, maxIndex));
-  };
-
-  const prev = () => {
-    setIndex((prev) => Math.max(prev - 1, 0));
-  };
-
-  
-
+  const router = useRouter();
   return (
     <section
       id="project"
@@ -31,46 +26,57 @@ export default function ProjectsPage() {
             Projects
           </span>
         </h1>
-
-        {/* CONTROLS */}
-        <div className="flex gap-3">
-          <button
-            onClick={prev}
-            disabled={index === 0}
-            className="px-4 py-2 rounded-md bg-slate-800 text-white disabled:opacity-40"
-          >
-            ←
-          </button>
-          <button
-            onClick={next}
-            disabled={index === maxIndex}
-            className="px-4 py-2 rounded-md bg-slate-800 text-white disabled:opacity-40"
-          >
-            →
-          </button>
-        </div>
       </div>
 
-      {/* VIEWPORT */}
-        <div className="overflow-hidden rounded-2xl p-5 ">
-        <div
-          className="
-            flex gap-10
-            transition-transform duration-500 ease-out
-          "
-          style={{
-            transform: `translateX(-${index * (100 / ITEMS_PER_VIEW)}%)`,
+      <div className="">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true
           }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}
+          className="w-full max-w-[12rem] md:max-w-6xl"
         >
-          {projects.map((project, i) => (
-            <div
-              key={i}
-              className="min-w-[calc(100%/3)]"
-            >
-              <ProjectCard project={project} />
-            </div>
-          ))}
-        </div>
+          <CarouselContent className="me-1 gap-0.5" >
+            {projects.map((project, i) => (
+              <CarouselItem key={i} className="basis-1/2 md:basis-1/3">
+                <div
+                  className="min-w-[calc(100%/3)]"
+                >
+                  <Card className="relative w-full max-w-[22rem] pt-0 bg-[#1F2B3F] border-[#314157]">
+                    <div className="absolute inset-0 z-30 aspect-video" />
+                    <img
+                      src={project.images.main}
+                      alt="Event cover"
+                      className="relative z-20 aspect-video w-full object-cover brightness-80 rounded-t-xl dark:brightness-40"
+                    />
+                    <CardHeader className="mb-0 px-3">
+                      <CardTitle className="text-gray-300">{project.title}</CardTitle>
+                      <CardDescription className="line-clamp-2 text-gray-400 leading-4.5 mb-0">
+                        {project.details?.description}
+                      </CardDescription>
+                      <div className="flex w-full justify-start flex-row gap-1">
+                        {project.technologies.map((tech) => (
+                          <Badge variant="secondary" className="text-gray-900" key={`id-n12${tech}`}>{tech}</Badge>
+                        ))}
+                      </div>
+                    </CardHeader>
+                    <CardFooter className="flex flex-col px-3">
+                      <Button className="w-full hover:bg-gradient-to-r from-blue-950 to-indigo-950 hover:text-white shadow-sm shadow-gray-600" variant="secondary"
+                        onClick={() => router.push(`/projects/${project.id}`)}
+
+                      >View Project</Button>
+                    </CardFooter>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );

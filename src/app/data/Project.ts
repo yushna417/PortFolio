@@ -17,7 +17,7 @@ export const projects: Project[] = [
         "Completed additional core functionalities",
       ],
       description:
-        "Hire Enumerator is a platform designed for hiring and managing enumerators. I contributed by redesigning pages and implementing major functionalities including registration, Firebase integration, and database operations.",
+        "A platform designed for hiring and managing enumerators. I contributed by redesigning pages and implementing major functionalities including registration, Firebase integration, and database operations.",
     },
   },
   {

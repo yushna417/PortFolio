@@ -1,21 +1,21 @@
 // src/app/skills/page.tsx
 "use client";
 import Link from "next/link";
-import SkillsChart from "../components/SkillsChart";
+import SkillsChart from "../../components/SkillsChart";
 import { skills } from "../data/skill";
 import { motion } from "framer-motion";
 
 export default function SkillsPage() {
-  const frontendSkills = skills.filter(skill => 
-    ["HTML", "Tailwind/CSS", "JavaScript", "TypeScript", "React", "Next.js", "Expo" ].includes(skill.name)
+  const frontendSkills = skills.filter(skill =>
+    ["HTML", "Tailwind/CSS", "JavaScript", "TypeScript", "React", "Next.js", "Expo"].includes(skill.name)
   );
-  
-  const backendSkills = skills.filter(skill => 
+
+  const backendSkills = skills.filter(skill =>
     ["Python", "Django", "PostgreSQL", "Firebase"].includes(skill.name)
   );
-  
-  const otherSkills = skills.filter(skill => 
-    !["HTML", "Tailwind/CSS", "JavaScript", "TypeScript", "React", "Expo", "Next.js",  "Python", "Django", "PostgreSQL", "Firebase"].includes(skill.name)
+
+  const otherSkills = skills.filter(skill =>
+    !["HTML", "Tailwind/CSS", "JavaScript", "TypeScript", "React", "Expo", "Next.js", "Python", "Django", "PostgreSQL", "Firebase"].includes(skill.name)
   );
 
   return (
@@ -40,7 +40,7 @@ export default function SkillsPage() {
 
         {/* Main Content */}
         <div className="space-y-20">
-          <section className="space-y-8 flex flex-wrap gap-x-8">            
+          <section className="space-y-8 flex flex-wrap gap-x-8">
 
             {/* Frontend Skills */}
             <motion.div
@@ -80,15 +80,10 @@ export default function SkillsPage() {
               </h3>
               <SkillsChart skills={otherSkills} />
             </motion.div>
-          </section>       
+          </section>
         </div>
       </div>
-       <div className="flex justify-end px-14 mt-20">
-        <Link href="/experience" className="px-6 py-3 border-2 text-white rounded-lg hover:from-gray-800 hover:to-gray-900 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
-              >
-                See what experiences out there -- →
-        </Link>
-      </div>
+
     </div>
   );
 }

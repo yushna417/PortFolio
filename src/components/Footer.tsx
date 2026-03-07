@@ -1,16 +1,10 @@
 // src/components/Footer.tsx
 import Link from "next/link";
 import { Icon } from "@iconify/react";
+import { socialLinks } from "../app/data/education";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-const socialLinks = [
-    { icon: "mdi:github", url: "https://github.com/yushna417" },
-    { icon: "mdi:linkedin", url: "https://www.linkedin.com/in/yushna-buddhacharya/" },
-    { icon: "mdi:twitter", url: "https://twitter.com/yourusername" },
-    { icon: "mdi:email", url: "mailto:buddhacharyay@gmail.com" },
-  ];
 
   return (
     <footer className="bg-slate-800 text-white py-8" id="footer">

@@ -21,7 +21,6 @@ export type Project = {
     main: string;
     others?: string[];
   };
-  videoUrl?: string;
   details?: {
     reponsibilities?: string[];
     description?: string

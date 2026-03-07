@@ -1,16 +1,16 @@
 // src/app/experience/page.tsx
-import ExperienceTimeline from "../components/ExperienceTimeline";
+import ExperienceTimeline from "../../components/ExperienceTimeline";
 import { experiences } from "../data/Experience";
 
-export default function ExperiencePage() {  
+export default function ExperiencePage() {
   return (
     <div id="experience" className="container mx-auto md:px-14 px-4 py-24">
       <div className="text-left mb-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-left">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-950 bg-clip-text text-transparent">
-              Professional Journey
-            </span>
-          </h1>
+          <span className="bg-gradient-to-r from-blue-600 to-purple-950 bg-clip-text text-transparent">
+            Professional Journey
+          </span>
+        </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl animate-fadeIn">
           My career path and the valuable experiences I&apos;ve gained along the way
         </p>

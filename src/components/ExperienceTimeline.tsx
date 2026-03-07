@@ -1,5 +1,5 @@
 // src/components/ExperienceTimeline.tsx
-import { Experience } from "../types/types";
+import { Experience } from "../app/types/types";
 
 type ExperienceTimelineProps = {
   experiences: Experience[];
@@ -14,7 +14,7 @@ const ExperienceTimeline = ({ experiences }: ExperienceTimelineProps) => {
           className={`relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group animate-fadeIn`}
           style={{ animationDelay: `${index * 0.1}s` }}
         >
-          
+
 
           <div className="w-[calc(100%)] md:w-[calc(50%-2.5rem)] bg-slate-800 p-4 rounded border border-slate-700 shadow">
             <div className="flex items-center justify-between space-x-2 mb-1">

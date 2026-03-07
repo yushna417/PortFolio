@@ -17,3 +17,4 @@ export const skills : Skill[] = [
     { name: "Git", level: 50,  icon: "git" },
     { name: "Github", level: 50,  icon: "github" },
   ];
+

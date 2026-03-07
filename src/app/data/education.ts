@@ -12,3 +12,8 @@ export const educations: Education[] = [
         year: "2019 - 2021"
     }
 ];
+
+export const socialLinks = [
+    { icon: "mdi:github", url: "https://github.com/yushna417" },
+    { icon: "mdi:linkedin", url: "https://www.linkedin.com/in/yushna-buddhacharya/" },
+  ];
